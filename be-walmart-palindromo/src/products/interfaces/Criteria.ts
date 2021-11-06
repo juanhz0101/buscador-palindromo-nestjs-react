@@ -1,5 +1,5 @@
 export interface Criteria {
-    executeSearch: boolean;
-    multiple: boolean;
-    hasDiscount: boolean;
+  executeSearch: boolean;
+  multiple: boolean;
+  hasDiscount: boolean;
 }
