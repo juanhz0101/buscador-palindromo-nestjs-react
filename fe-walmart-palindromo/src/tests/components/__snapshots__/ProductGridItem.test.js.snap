@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <ProductGridItem /> debe de mostrar <ProductGridItem /> correctamente 1`] = `
+<div
+  className="card animate__animated animate__fadeIn"
+>
+  <img
+    alt="dsaasd"
+    src="https://www.lider.cl/catalogo/images/babyIcon.svg"
+  />
+  <p>
+    ID 
+    2
+  </p>
+  <p
+    className="brand"
+  >
+    Marca: 
+    dsaasd
+  </p>
+  <p>
+    Descripcion: 
+    zlrwax bñyrh
+  </p>
+  <p>
+    Precio original: 
+    130173
+  </p>
+  <p>
+    Precio con descuento: 
+    65086.5
+     
+  </p>
+  <p>
+    Precio con descuento: 
+    50
+     
+  </p>
+</div>
+`;

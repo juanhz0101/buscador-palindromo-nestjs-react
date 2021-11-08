@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <PalindromeApp /> debe de mostrar <PalindromeApp /> correctamente 1`] = `
+<Fragment>
+  <h2>
+    Lider Palindromo
+  </h2>
+  <hr />
+  <AddSearch
+    setQuery={[Function]}
+  />
+  <ProductGrid
+    query={
+      Object {
+        "pagination": "/products?page=1&limit=20",
+        "query": "",
+      }
+    }
+    setQuery={[Function]}
+  />
+</Fragment>
+`;
+
+exports[`Pruebas en <PalindromeApp /> debe mostrar una lista de productos 1`] = `
+<Fragment>
+  <h2>
+    Lider Palindromo
+  </h2>
+  <hr />
+  <AddSearch
+    setQuery={[Function]}
+  />
+  <ProductGrid
+    query={
+      Object {
+        "pagination": "/products?page=1&limit=20",
+        "query": "",
+      }
+    }
+    setQuery={[Function]}
+  />
+</Fragment>
+`;

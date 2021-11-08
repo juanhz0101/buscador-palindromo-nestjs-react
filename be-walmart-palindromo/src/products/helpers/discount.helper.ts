@@ -29,7 +29,9 @@ export const setDiscountToProducts = (products: Product[]): Product[] => {
   const discount = 50;
 
   const productsWithDiscount = products.map((product) => {
-    product.price = product.price - (product.price * discount) / 100;
+    product.priceWithDiscount =
+      product.price - (product.price * discount) / 100;
+    product.discount = discount;
     return product;
   });
 

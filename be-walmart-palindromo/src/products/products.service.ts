@@ -1,3 +1,4 @@
+import { MongoPagination } from '@algoan/nestjs-pagination';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
@@ -15,13 +16,28 @@ export class ProductsService {
     @InjectModel('Product') private readonly productModel: Model<Product>,
   ) {}
 
-  async getProducts(): Promise<Product[]> {
-    return await this.productModel.find();
+  async getProducts(
+    pagination: MongoPagination,
+  ): Promise<{ count: number; data: Product[] }> {
+    const data: Product[] = await this.productModel
+      .find(pagination.filter)
+      .skip(pagination.skip)
+      .limit(pagination.limit);
+    const count: number = await this.productModel.count(pagination.filter);
+
+    return {
+      count,
+      data,
+    };
   }
 
-  async getProductsBySearch(query: string): Promise<Product[]> {
+  async getProductsBySearch(
+    query: string,
+    pagination: MongoPagination,
+  ): Promise<{ count: number; data: Product[] }> {
     let results: Product[] = [];
     let filter: any = {};
+    let count: number;
     const criteria: Criteria = SearchCriteria(query);
 
     if (criteria.executeSearch) {
@@ -36,13 +52,18 @@ export class ProductsService {
         filter.id = parseInt(query);
       }
 
-      const products: Product[] = await this.productModel.find(filter);
+      const products: Product[] = await this.productModel
+        .find(filter)
+        .skip(pagination.skip)
+        .limit(pagination.limit);
+
+      count = await this.productModel.count(filter);
+
       results = criteria.hasDiscount
         ? setDiscountToProducts(products)
         : products;
     }
-
-    return results;
+    return { count, data: results };
   }
 
   async getProduct(id: number): Promise<Product> {

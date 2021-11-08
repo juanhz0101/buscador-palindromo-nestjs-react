@@ -1,4 +1,9 @@
 import {
+  PaginationBodyInterceptor,
+  MongoPaginationParamDecorator,
+  MongoPagination,
+} from '@algoan/nestjs-pagination';
+import {
   Body,
   Controller,
   Delete,
@@ -6,6 +11,8 @@ import {
   Param,
   Post,
   Put,
+  Query,
+  UseInterceptors,
 } from '@nestjs/common';
 import { CreateProductDto } from './dto/create-products.dto';
 import { Product } from './interfaces/Product';
@@ -15,14 +22,46 @@ import { ProductsService } from './products.service';
 export class ProductsController {
   constructor(private productService: ProductsService) {}
 
+  @UseInterceptors(
+    new PaginationBodyInterceptor({ pageName: 'page', perPageName: 'limit' }),
+  )
   @Get()
-  getProducts(): Promise<Product[]> {
-    return this.productService.getProducts();
+  async getProducts(
+    @MongoPaginationParamDecorator({
+      pageName: 'page',
+      perPageName: 'limit',
+    })
+    pagination: MongoPagination,
+  ): Promise<{ totalResources: number; resources: Product[] }> {
+    const { count, data } = await this.productService.getProducts(pagination);
+
+    return {
+      totalResources: count,
+      resources: data,
+    };
   }
 
-  @Get('/search/:query')
-  getProductsBySearch(@Param('query') query: string): Promise<Product[]> {
-    return this.productService.getProductsBySearch(query);
+  @UseInterceptors(
+    new PaginationBodyInterceptor({ pageName: 'page', perPageName: 'limit' }),
+  )
+  @Get('/search')
+  async getProductsBySearch(
+    @Query('query') query: string,
+    @MongoPaginationParamDecorator({
+      pageName: 'page',
+      perPageName: 'limit',
+    })
+    pagination: MongoPagination,
+  ): Promise<{ totalResources: number; resources: Product[] }> {
+    const { count, data } = await this.productService.getProductsBySearch(
+      query,
+      pagination,
+    );
+
+    return {
+      totalResources: count,
+      resources: data,
+    };
   }
 
   @Get(':id')

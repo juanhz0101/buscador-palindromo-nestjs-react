@@ -6,4 +6,6 @@ export interface Product extends Document {
   description: string;
   image: string;
   price: number;
+  priceWithDiscount?: number;
+  discount?: number;
 }

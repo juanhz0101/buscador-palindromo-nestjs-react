@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <ProductGrid /> debe de mostrar <ProductGrid /> correctamente 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeIn"
+  />
+  <p
+    className="animate__animated animate__flash"
+  >
+    Loading
+  </p>
+  <div
+    className="card-grid"
+  />
+  <div>
+    <p>
+      Total registros: 
+      21
+    </p>
+    <p>
+      Total registros por pagina: 
+    </p>
+    <p>
+      Total paginas: 
+    </p>
+    <p>
+      Pagina actual: 
+    </p>
+    <br />
+    <p>
+      <button
+        disabled={false}
+        onClick={[Function]}
+      >
+        Previa
+      </button>
+      <button
+        disabled={false}
+        onClick={[Function]}
+      >
+        Siguiente
+      </button>
+      <button
+        disabled={false}
+        onClick={[Function]}
+      >
+        Primera
+      </button>
+      <button
+        disabled={false}
+        onClick={[Function]}
+      >
+        Ultima
+      </button>
+    </p>
+  </div>
+</Fragment>
+`;
+
+exports[`Pruebas en <ProductGrid /> debe de mostrar items cuando se cargan productos useFetchProducts 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeIn"
+  />
+  <div
+    className="card-grid"
+  >
+    <ProductGridItem
+      brand="dsaasd"
+      description="zlrwax bñyrh"
+      discount="50"
+      id="2"
+      image="https://www.lider.cl/catalogo/images/babyIcon.svg"
+      key="2"
+      price="130173"
+      priceWithDiscount="65086.5"
+    />
+    <ProductGridItem
+      brand="dsaasd"
+      description="zlrwax bñyrh"
+      discount="50"
+      id="532"
+      image="https://www.lider.cl/catalogo/images/babyIcon.svg"
+      key="532"
+      price="130173"
+      priceWithDiscount="65086.5"
+    />
+  </div>
+  <div>
+    <p>
+      Total registros: 
+      21
+    </p>
+    <p>
+      Total registros por pagina: 
+    </p>
+    <p>
+      Total paginas: 
+    </p>
+    <p>
+      Pagina actual: 
+    </p>
+    <br />
+    <p>
+      <button
+        disabled={false}
+        onClick={[Function]}
+      >
+        Previa
+      </button>
+      <button
+        disabled={false}
+        onClick={[Function]}
+      >
+        Siguiente
+      </button>
+      <button
+        disabled={false}
+        onClick={[Function]}
+      >
+        Primera
+      </button>
+      <button
+        disabled={false}
+        onClick={[Function]}
+      >
+        Ultima
+      </button>
+    </p>
+  </div>
+</Fragment>
+`;
