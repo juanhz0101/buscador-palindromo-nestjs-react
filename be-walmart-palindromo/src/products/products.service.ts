@@ -34,21 +34,22 @@ export class ProductsService {
     query: string,
     pagination: MongoPagination,
   ): Promise<{ count: number; data: Product[] }> {
+    let sanitizeQuery = query.toLowerCase().trim()
     let results: Product[] = [];
     let filter: any = {};
     let count: number;
-    const criteria: Criteria = SearchCriteria(query);
+    const criteria: Criteria = SearchCriteria(sanitizeQuery);
 
     if (criteria.executeSearch) {
       if (criteria.multiple) {
         filter = {
           $or: [
-            { brand: { $regex: query } },
-            { description: { $regex: query } },
+            { brand: { $regex: sanitizeQuery } },
+            { description: { $regex: sanitizeQuery } },
           ],
         };
       } else {
-        filter.id = parseInt(query);
+        filter.id = parseInt(sanitizeQuery);
       }
       const products: Product[] = await this.productModel
         .find(filter)
