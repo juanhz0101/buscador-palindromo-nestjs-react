@@ -3,18 +3,7 @@ import {
   MongoPaginationParamDecorator,
   MongoPagination,
 } from '@algoan/nestjs-pagination';
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  Param,
-  Post,
-  Put,
-  Query,
-  UseInterceptors,
-} from '@nestjs/common';
-import { CreateProductDto } from './dto/create-products.dto';
+import { Controller, Get, Query, UseInterceptors } from '@nestjs/common';
 import { Product } from './interfaces/Product';
 import { ProductsService } from './products.service';
 
@@ -62,28 +51,5 @@ export class ProductsController {
       totalResources: count,
       resources: data,
     };
-  }
-
-  @Get(':id')
-  getProduct(@Param('id') id: string): Promise<Product> {
-    return this.productService.getProduct(parseInt(id));
-  }
-
-  @Post()
-  createProduct(@Body() product: CreateProductDto): Promise<Product> {
-    return this.productService.createProduct(product);
-  }
-
-  @Delete(':id')
-  deleteProduct(@Param('id') id: string): Promise<Product> {
-    return this.productService.deleteProduct(id);
-  }
-
-  @Put(':id')
-  updateProduct(
-    @Body() product: CreateProductDto,
-    @Param('id') id: string,
-  ): Promise<Product> {
-    return this.productService.updateProduct(id, product);
   }
 }

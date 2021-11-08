@@ -3,7 +3,6 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Product } from './interfaces/Product';
-import { CreateProductDto } from './dto/create-products.dto';
 import {
   SearchCriteria,
   setDiscountToProducts,
@@ -51,7 +50,6 @@ export class ProductsService {
       } else {
         filter.id = parseInt(query);
       }
-
       const products: Product[] = await this.productModel
         .find(filter)
         .skip(pagination.skip)
@@ -64,24 +62,5 @@ export class ProductsService {
         : products;
     }
     return { count, data: results };
-  }
-
-  async getProduct(id: number): Promise<Product> {
-    return await this.productModel.findById(id);
-  }
-
-  async createProduct(product: CreateProductDto): Promise<Product> {
-    const newProduct = new this.productModel(product);
-    return await newProduct.save();
-  }
-
-  async deleteProduct(id: string): Promise<Product> {
-    return await this.productModel.findByIdAndDelete(id);
-  }
-
-  async updateProduct(id: string, product: CreateProductDto): Promise<Product> {
-    return await this.productModel.findByIdAndUpdate(id, product, {
-      new: true,
-    });
   }
 }

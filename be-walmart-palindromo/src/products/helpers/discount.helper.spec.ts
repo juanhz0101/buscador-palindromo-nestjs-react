@@ -86,6 +86,6 @@ describe('Pruebas discount.helper.spect.ts', () => {
       product[0].price - (product[0].price * toDiscount) / 100;
     const productWithDiscount = setDiscountToProducts(product);
 
-    expect(priceWithDiscount).toBe(productWithDiscount[0].price);
+    expect(priceWithDiscount).toBe(productWithDiscount[0].priceWithDiscount);
   });
 });

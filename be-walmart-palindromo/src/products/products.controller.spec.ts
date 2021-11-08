@@ -4,6 +4,7 @@ import { ProductsController } from './products.controller';
 import { ProductsService } from './products.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ProductSchema } from './schemas/product.schema';
+import { MongoPagination } from '@algoan/nestjs-pagination';
 
 describe('ProductsController', () => {
   let controller: ProductsController;
@@ -29,7 +30,48 @@ describe('ProductsController', () => {
     controller = module.get<ProductsController>(ProductsController);
   });
 
-  it('should be defined', () => {
-    expect(controller.getProducts()).toBeDefined();
+  it('el metodo getProducts de estar definido', () => {
+    const pagination: MongoPagination = {
+      filter: {},
+      skip: 1,
+      sort: { _id: -1 },
+      limit: 1,
+    };
+    expect(controller.getProducts(pagination)).toBeDefined();
+  });
+
+  it('el metodo getProductsBySearch de estar definido', () => {
+    const pagination: MongoPagination = {
+      filter: {},
+      skip: 1,
+      sort: { _id: -1 },
+      limit: 1,
+    };
+    expect(controller.getProductsBySearch('dsaasd', pagination)).toBeDefined();
+  });
+
+  it('debe retornar 10 productos el metodo getProducts', async () => {
+    const pagination: MongoPagination = {
+      filter: {},
+      skip: 0,
+      sort: {},
+      limit: 10,
+    };
+
+    const products = await controller.getProducts(pagination);
+    expect(products.resources.length).toBe(10);
+  });
+
+  it('debe retornar 1 producto con descuento del 50% el metodo getProductsBySearch', async () => {
+    const pagination: MongoPagination = {
+      filter: {},
+      skip: 0,
+      sort: {},
+      limit: 10,
+    };
+
+    const products = await controller.getProductsBySearch('dsaasd', pagination);
+
+    expect(products.resources[0].discount).toBe(50);
   });
 });
