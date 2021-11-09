@@ -14,8 +14,8 @@ describe('ProductsService', () => {
       imports: [
         ProductsModule,
         MongooseModule.forRoot(
-          'mongodb://productListUser:productListPassword@localhost:27017/promotions?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false',
-        ),
+          'mongodb://productListUser:productListPassword@db-walmart-backend-container:27017/promotions?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false',
+          ),
         MongooseModule.forFeature([
           {
             name: 'Product',
