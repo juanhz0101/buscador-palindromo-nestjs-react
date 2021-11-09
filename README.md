@@ -24,8 +24,8 @@ cd .
 $ docker-compose build
 ```
 Se espera la creación de 3 imágenes:
-* be-walmart-backend-container
-* fe-walmart-backend-container
+* be-walmart-palindromo-image
+* fe-walmart-palindromo-image
 * db-walmart-container
 
 ### 2. Ejecución de contenedores
@@ -41,11 +41,11 @@ $ docker exec db-walmart-container bash -c './database/import.sh'
 ### 4. Ejecución de tests
 Backend 
 ```
-$ docker exec be-walmart-backend-container sh -c 'npm run test'
+$ docker exec be-walmart-palindromo-container sh -c 'npm run test'
 ```
 Fronted
 ```
-$ docker exec fe-walmart-backend-container sh -c 'npm run test'
+$ docker exec fe-walmart-palindromo-container sh -c 'npm run test'
 ```
 
 ### 5. Acceso App Palíndromo 🤖
