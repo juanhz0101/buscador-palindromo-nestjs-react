@@ -13,7 +13,7 @@ services:
     build:
       context: ./fe-walmart-palindromo
     ports:
-      - "80:80"
+      - "3001:3001"
 
   mongo:
     environment:
@@ -21,7 +21,7 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=productListPassword
     ports:
       - '27017:27017'
-    container_name: db-walmart-backend-container
+    container_name: db-walmart-container
     volumes:
       - './db-walmart-palindromo:/database'
     image: 'mongo:3.6.8'

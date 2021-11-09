@@ -27,7 +27,7 @@ done
 echo ""
 echo "¡¡Todo Listo, App Palindromo 🤖¡¡"
 echo "Ingreso Front ✅:"
-echo "http://127.0.0.1:80"
+echo "http://127.0.0.1:3001"
 echo ""
 echo "Ruta de API ✅:"
 echo "http://127.0.0.1:3000"

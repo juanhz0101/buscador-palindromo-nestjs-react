@@ -3,6 +3,13 @@ Líder quiere realizar una nueva campaña a través del sitio, pero esta ocasió
 especial y que sea una sorpresa para sus clientes.
 La campaña consiste en que cada vez que un cliente busque con un palíndromo, todos los
 productos encontrados tendrán un **50%** de descuento, esta búsqueda aplica para
+
+## Stack de tecnologias
+* **Backend**: NestJs --version 8.0.0
+* **Fronted**: React --version 17.0.2
+* **DB**: MongoDB
+* **Test**: Jest, Enzyme (Componentes React)
+
 **identificadores (Id de Producto), marcas y descripciones de productos.**
 ## Instalacion y configuracion de ambiente con Docker
 
@@ -27,7 +34,17 @@ docker-compose up -d
 
 ### 3. Cargar base de datos
 ```
-docker exec db-walmart-backend-container bash -c './app/database/import.sh'
+docker exec db-walmart-container bash -c './database/import.sh'
+```
+
+### 4. Ejecucion de tests
+Backend 
+```
+docker exec be-walmart-backend-container sh -c 'npm run test'
+```
+Fronted
+```
+docker exec fe-walmart-backend-container sh -c 'npm run test'
 ```
 
 ### 4. Acceso App Palindromo 🤖
