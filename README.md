@@ -52,7 +52,7 @@ $ docker exec fe-walmart-backend-container sh -c 'npm run test'
 
 Ingreso Front ✅:
 
-http://127.0.0.1:80
+http://127.0.0.1:3001
 
 Ruta de API ✅:
 
