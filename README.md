@@ -26,7 +26,7 @@ $ docker-compose build
 Se espera la creación de 3 imágenes:
 * be-walmart-palindromo-image
 * fe-walmart-palindromo-image
-* db-walmart-container
+* mongo:3.6.8
 
 ### 2. Ejecución de contenedores
 ```
