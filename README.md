@@ -48,7 +48,7 @@ Fronted
 $ docker exec fe-walmart-backend-container sh -c 'npm run test'
 ```
 
-### 4. Acceso App Palíndromo 🤖
+### 5. Acceso App Palíndromo 🤖
 
 Ingreso Front ✅:
 
@@ -58,7 +58,7 @@ Ruta de API ✅:
 
 http://127.0.0.1:3000
 
-### 5. Destruir ambiente (Utilizar al final de la revisión)
+### 6. Destruir ambiente (Utilizar al final de la revisión)
 ```
 $ docker-compose down
 ```
