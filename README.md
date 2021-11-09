@@ -20,7 +20,7 @@ productos encontrados tendrán un **50%** de descuento, esta búsqueda aplica pa
 
 ```
 cd .
-docker-compose build
+$ docker-compose build
 ```
 Se espera la creacion de 3 imagenes:
 * be-walmart-backend-container
@@ -29,22 +29,22 @@ Se espera la creacion de 3 imagenes:
 
 ### 2. Ejecución de contenedores
 ```
-docker-compose up -d
+$ docker-compose up -d
 ```
 
 ### 3. Cargar base de datos
 ```
-docker exec db-walmart-container bash -c './database/import.sh'
+$ docker exec db-walmart-container bash -c './database/import.sh'
 ```
 
 ### 4. Ejecucion de tests
 Backend 
 ```
-docker exec be-walmart-backend-container sh -c 'npm run test'
+$ docker exec be-walmart-backend-container sh -c 'npm run test'
 ```
 Fronted
 ```
-docker exec fe-walmart-backend-container sh -c 'npm run test'
+$ docker exec fe-walmart-backend-container sh -c 'npm run test'
 ```
 
 ### 4. Acceso App Palindromo 🤖
@@ -59,6 +59,6 @@ http://127.0.0.1:3000
 
 ### 5. Destruir ambiente (Utilizar al final de la revisión)
 ```
-docker-compose down
+$ docker-compose down
 ```
 
