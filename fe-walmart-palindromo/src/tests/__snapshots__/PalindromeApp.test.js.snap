@@ -3,12 +3,13 @@
 exports[`Pruebas en <PalindromeApp /> debe de mostrar <PalindromeApp /> correctamente 1`] = `
 <Fragment>
   <h2>
-    Lider Palindromo
+    Lider Palindromo 🌟
   </h2>
   <hr />
   <AddSearch
     setQuery={[Function]}
   />
+  <hr />
   <ProductGrid
     query={
       Object {
@@ -24,12 +25,13 @@ exports[`Pruebas en <PalindromeApp /> debe de mostrar <PalindromeApp /> correcta
 exports[`Pruebas en <PalindromeApp /> debe mostrar una lista de productos 1`] = `
 <Fragment>
   <h2>
-    Lider Palindromo
+    Lider Palindromo 🌟
   </h2>
   <hr />
   <AddSearch
     setQuery={[Function]}
   />
+  <hr />
   <ProductGrid
     query={
       Object {

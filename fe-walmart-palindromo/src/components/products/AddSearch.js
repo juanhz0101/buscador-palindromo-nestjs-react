@@ -22,6 +22,7 @@ function AddSearch({ setQuery }) {
                 type="text" 
                 value={inputValue}
                 onChange={ (e) => setInputValue(e.target.value) }
+                placeholder="Por favor ingrese un Nombre o ID de producto"
             />
         </form>
     )

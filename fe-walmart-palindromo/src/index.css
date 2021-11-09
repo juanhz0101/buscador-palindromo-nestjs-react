@@ -27,11 +27,17 @@ input {
   margin-bottom: 10px;
   margin-right: 10px;
   overflow: hidden;
+  padding-left: 10px;
 }
 
 .card p {
-  padding: 5px;
-  text-align: center;
+  text-align: left;
+}
+
+.discount{
+  font-size:1.3rem;
+  font-weight:bold;
+  color: rgb(190, 46, 70);
 }
 
 .card img {

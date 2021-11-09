@@ -34,7 +34,7 @@ describe('Pruebas en <ProductGridItem />', () => {
     test('debe de tener un párrafo con la marca', () => {
 
         const p = wrapper.find('.brand');
-        expect( p.text().trim() ).toBe( 'Marca: '+ brand );
+        expect( p.text().trim() ).toBe( 'Marca  '+ brand );
     })
 
     test('debe de tener la imagen igual al url y alt de los props', () => {

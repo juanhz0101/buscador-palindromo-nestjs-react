@@ -4,6 +4,7 @@ exports[`Pruebas en <AddCategory /> debe de mostrar <AddCategory /> correctament
 <form>
   <input
     onChange={[Function]}
+    placeholder="Por favor ingrese un Nombre o ID de producto"
     type="text"
     value=""
   />

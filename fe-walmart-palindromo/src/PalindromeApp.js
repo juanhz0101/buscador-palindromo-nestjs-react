@@ -8,9 +8,10 @@ function PalindromeApp({ defaultQuery = { query: '', pagination:'/products?page=
     
     return (
         <>
-            <h2>Lider Palindromo</h2>
+            <h2>Lider Palindromo 🌟</h2>
             <hr />
             <AddSearch setQuery={setQuery} /> 
+            <hr />
             <ProductGrid query={query} setQuery={setQuery} /> 
             
         </>

@@ -4,37 +4,62 @@ exports[`Pruebas en <ProductGridItem /> debe de mostrar <ProductGridItem /> corr
 <div
   className="card animate__animated animate__fadeIn"
 >
+  <p>
+    Identificador: 
+    2
+  </p>
   <img
     alt="dsaasd"
     src="https://www.lider.cl/catalogo/images/babyIcon.svg"
   />
+  <p
+    className="discount"
+  >
+    Descuento %
+    50
+     💥 
+  </p>
   <p>
-    ID 
-    2
+     
+    <b>
+      Precio normal
+    </b>
+     
+    <br />
+    <del>
+      $
+      130.173
+    </del>
+  </p>
+  <p>
+     
+    <b>
+      Precio x Hoy
+    </b>
+     
+    <br />
+     $
+    65.086,5
+     😱
   </p>
   <p
     className="brand"
   >
-    Marca: 
+    <b>
+      Marca
+    </b>
+     
+    <br />
+     
     dsaasd
   </p>
   <p>
-    Descripcion: 
+    <b>
+      Descripción
+    </b>
+     
+    <br />
     zlrwax bñyrh
-  </p>
-  <p>
-    Precio original: 
-    130173
-  </p>
-  <p>
-    Precio con descuento: 
-    65086.5
-     
-  </p>
-  <p>
-    Precio con descuento: 
-    50
-     
   </p>
 </div>
 `;

@@ -2,9 +2,6 @@
 
 exports[`Pruebas en <ProductGrid /> debe de mostrar <ProductGrid /> correctamente 1`] = `
 <Fragment>
-  <h3
-    className="animate__animated animate__fadeIn"
-  />
   <p
     className="animate__animated animate__flash"
   >
@@ -60,9 +57,6 @@ exports[`Pruebas en <ProductGrid /> debe de mostrar <ProductGrid /> correctament
 
 exports[`Pruebas en <ProductGrid /> debe de mostrar items cuando se cargan productos useFetchProducts 1`] = `
 <Fragment>
-  <h3
-    className="animate__animated animate__fadeIn"
-  />
   <div
     className="card-grid"
   >
