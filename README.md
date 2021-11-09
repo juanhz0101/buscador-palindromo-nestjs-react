@@ -2,7 +2,7 @@
 Líder quiere realizar una nueva campaña a través del sitio, pero esta ocasión quiere que sea
 especial y que sea una sorpresa para sus clientes.
 La campaña consiste en que cada vez que un cliente busque con un palíndromo, todos los
-productos encontrados tendrán un **50%** de descuento, esta búsqueda aplica para
+productos encontrados tendrán un **50%** de descuento, esta búsqueda aplica para **Identificadores (Id de Producto), marcas y descripciones de productos.**
 
 ## Stack de tecnologías
 * **Backend**: NestJs --version 8.0.0
@@ -10,7 +10,7 @@ productos encontrados tendrán un **50%** de descuento, esta búsqueda aplica pa
 * **DB**: MongoDB
 * **Test**: Jest, Enzyme (Componentes React)
 
-**Identificadores (Id de Producto), marcas y descripciones de productos.**
+
 ## Instalación y configuración de ambiente con Docker
 
 - *Importante: Versión docker utilizada **20.10.8, build 3967b7d***
