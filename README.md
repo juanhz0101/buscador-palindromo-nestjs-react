@@ -14,7 +14,7 @@ productos encontrados tendrán un **50%** de descuento, esta búsqueda aplica pa
 ## Instalación y configuración de ambiente con Docker
 
 - *Importante: Versión docker utilizada **20.10.8, build 3967b7d***
-- *Todos los comandos mencionados a continuación deben ser ejecutados en la raíz del repositorio y paso a
+- *Todos los comandos mencionados a continuación deben ser ejecutados en la raíz del repositorio y paso
 por paso*
 
 ### 1. Creación de imágenes
