@@ -1,7 +1,6 @@
-# WALMART PALÍNDROMO
-Líder quiere realizar una nueva campaña a través del sitio, pero esta ocasión quiere que sea
-especial y que sea una sorpresa para sus clientes.
-La campaña consiste en que cada vez que un cliente busque con un palíndromo, todos los
+# BUSCADOR PALÍNDROMO
+
+Cada vez que un usuario busque con un palíndromo, todos los
 productos encontrados tendrán un **50%** de descuento, esta búsqueda aplica para **Identificadores (Id de Producto), marcas y descripciones de productos.**
 
 ## Stack de tecnologías
