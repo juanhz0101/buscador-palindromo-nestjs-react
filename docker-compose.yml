@@ -1,17 +1,17 @@
 services:
   backend:
-    container_name: be-walmart-palindromo-container
-    image: be-walmart-palindromo-image
+    container_name: be-buscador-palindromo-container
+    image: be-buscador-palindromo-image
     build:
-      context: ./be-walmart-palindromo
+      context: ./be-buscador-palindromo
     ports:
       - "3000:3000"
 
   fronted:
-    container_name: fe-walmart-palindromo-container
-    image: fe-walmart-palindromo-image
+    container_name: fe-buscador-palindromo-container
+    image: fe-buscador-palindromo-image
     build:
-      context: ./fe-walmart-palindromo
+      context: ./fe-buscador-palindromo
     ports:
       - "3001:3001"
 
@@ -21,9 +21,9 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=productListPassword
     ports:
       - '27017:27017'
-    container_name: db-walmart-container
+    container_name: db-buscador-container
     volumes:
-      - './db-walmart-palindromo:/database'
+      - './db-buscador-palindromo:/database'
     image: 'mongo:3.6.8'
 
 networks:

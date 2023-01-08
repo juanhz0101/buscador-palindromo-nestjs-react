@@ -23,8 +23,8 @@ cd .
 $ docker-compose build
 ```
 Se espera la creación de 3 imágenes:
-* be-walmart-palindromo-image
-* fe-walmart-palindromo-image
+* be-buscador-palindromo-image
+* fe-buscador-palindromo-image
 * mongo:3.6.8
 
 ### 2. Ejecución de contenedores
@@ -34,17 +34,17 @@ $ docker-compose up -d
 
 ### 3. Cargar base de datos
 ```
-$ docker exec db-walmart-container bash -c './database/import.sh'
+$ docker exec db-buscador-container bash -c './database/import.sh'
 ```
 
 ### 4. Ejecución de tests
 Backend 
 ```
-$ docker exec be-walmart-palindromo-container sh -c 'npm run test'
+$ docker exec be-buscador-palindromo-container sh -c 'npm run test'
 ```
 Fronted
 ```
-$ docker exec fe-walmart-palindromo-container sh -c 'npm run test'
+$ docker exec fe-buscador-palindromo-container sh -c 'npm run test'
 ```
 
 ### 5. Acceso App Palíndromo 🤖
@@ -61,9 +61,3 @@ http://127.0.0.1:3000
 ```
 $ docker-compose down
 ```
-
-### ⚠ En caso de emergencia, emplear Palíndromo Publicado ⚠
-https://juanhz0101.github.io/fe-walmart-palindromo-deploy
-
-
-***¡Espero esta prueba sea de su agrado :D, también recibo Pull Requests para mejorar el proyecto, muchas gracias y feliz día.!***
